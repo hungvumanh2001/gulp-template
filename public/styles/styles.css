@@ -9,8 +9,218 @@
   padding: 0 15px;
 }
 
+.header {
+  min-height: 100rem;
+  background: linear-gradient(to bottom, rgba(233, 131, 130, 0.8), rgba(238, 216, 137, 0.8)), url("../images/header-bg.jpg") no-repeat center/cover;
+  color: white;
+}
+.header-logo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+.header-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.header-menu-link {
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.25s linear;
+}
+.header-menu-icon {
+  color: white;
+}
+.header-top {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.header-menu {
+  display: flex;
+}
+.header-content {
+  padding-top: 17rem;
+  text-align: center;
+  max-width: 84rem;
+  margin: 0 auto;
+}
+.header-content-caption {
+  font-size: 7.2rem;
+  font-family: "Kaushan Script", cursive;
+  margin-bottom: 3rem;
+}
+.header-content-main {
+  font-size: 15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+  position: relative;
+}
+.header-content-main::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6rem;
+  height: 0.5rem;
+  background-color: white;
+}
+.header-content-more {
+  text-transform: uppercase;
+  color: white;
+  padding: 1rem 3rem;
+  border: 4px solid white;
+  font-weight: bold;
+  display: inline-block;
+}
+.header-bottom {
+  margin-top: 15.5rem;
+  padding-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header-bottom-item {
+  padding-top: 2.5rem;
+  border-top: 5px solid white;
+  width: calc(25% - 30px);
+  margin-left: 3rem;
+  opacity: 0.6;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+.header-bottom-item::before {
+  content: "";
+  height: 5px;
+  width: 7rem;
+  background-color: #e98382;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.header-bottom-item:hover, .header-bottom-item.is-active {
+  opacity: 1;
+}
+.header-bottom-item:hover:before, .header-bottom-item.is-active:before {
+  opacity: 1;
+}
+.header-bottom-number {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+.header-bottom-text {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 768px) {
+  .header-menu-item:not(:first-child) {
+    margin-left: 5rem;
+  }
+  .header-menu-link {
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid transparent;
+    transition: all 0.25s linear;
+  }
+  .header-menu-link:hover {
+    color: #eed889;
+    border-bottom-color: #eed889;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header {
+    min-height: unset;
+  }
+  .header .header-bottom {
+    margin-top: 10rem;
+  }
+  .header .header-content {
+    padding-top: 10rem;
+  }
+  .header .header-content-main {
+    font-size: 10rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header .header-bottom-text {
+    display: none;
+  }
+  .header .header-bottom {
+    margin-top: 5rem;
+  }
+  .header .header-content {
+    padding-top: 5rem;
+  }
+  .header .header-content-caption {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .header .header-content-main {
+    font-size: 5rem;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+  }
+  .header .header-bottom-item {
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+  .header .header-bottom-item::before {
+    width: 35%;
+  }
+  .header .header-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    width: 30rem;
+    display: block;
+    padding: 2rem 2.5rem;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: transform 0.25 ease-in;
+  }
+  .header .header-menu.is-show {
+    transform: translateY(0);
+  }
+  .header .header-menu-item {
+    margin-bottom: 1rem;
+  }
+  .header .header-menu-icon {
+    display: block;
+    color: #333333;
+    padding: 1.5rem;
+  }
+  .header .header-menu-icon:hover {
+    color: #e98382;
+  }
+  .header .header-menu-link {
+    color: #333333;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 4px;
+  }
+  .header .header-menu-link:hover {
+    color: white;
+    background-color: #eed889;
+  }
+  .header .header-toggle {
+    display: inline-block;
+  }
+}
+
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 a {
@@ -26,6 +236,7 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1;
   color: #333333;
+  font-size: 14px;
 }
 
 .wrapper {
