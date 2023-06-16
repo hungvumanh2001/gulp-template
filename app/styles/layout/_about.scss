@@ -1,0 +1,85 @@
+.about {
+  padding-top: 9.3rem;
+  padding-bottom: 11rem;
+  background-color: white;
+  // Chia layout bang Flex
+  //   &-list {
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     margin-left: -3rem;
+  //   }
+  //   &-item {
+  //     margin-left: 3rem;
+  //     width: calc(33.33% - 3rem);
+  //   }
+  // Chia layout bang Grid
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+  }
+  &-item {
+    position: relative;
+    z-index: 1;
+    transition: all 0.25s linear;
+  }
+  &-item:hover {
+    transform: translate(-1rem, -1rem);
+    .about-content {
+      opacity: 1;
+      visibility: visible;
+    }
+    &::after {
+      transform: translate(1rem, 1rem);
+    }
+  }
+  &-item::after {
+    content: "";
+    @include absoluteFull();
+    @include bg($third-color);
+    transition: all 0.25s linear;
+    // transform: translate(1rem, 1rem);
+    z-index: -1;
+  }
+  &-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s linear;
+    @include absoluteFull();
+    background: linear-gradient(
+      to bottom,
+      rgba($primary-color, 1),
+      rgba($secondary-color, 1)
+    );
+    //them z-index de khong bi after cua .item de len
+    z-index: 2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+  &-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+  @include maxWidth(767px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    // Flexbox responsive about-list
+    // &-item {
+    //   width: 100%;
+    //   margin-bottom: 2.5rem;
+    // }
+    // CSS Grid responsive about-list
+    &-list {
+      grid-template-columns: 100%;
+      grid-row-gap: 2.5rem;
+    }
+  }
+}
