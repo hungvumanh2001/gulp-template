@@ -20,3 +20,12 @@ mixin serviceItem(src, title, desc)
 		.service-item-info
 			h3.service-item-title= title
 			p.service-item-desc= desc
+
+mixin wedoItem(src, title, desc, active="")
+	.wedo-item(class = active)
+		.wedo-item-header
+			img(src=src).wedo-item-icon
+			h3.wedo-item-title= title
+			i.fa.fa-angle-up.wedo-item-arrow
+		.wedo-item-content
+			.wedo-item-text= desc
