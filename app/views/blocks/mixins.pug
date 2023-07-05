@@ -13,3 +13,10 @@ mixin blockBox(caption, title, desc)
 		h2.block-box-heading= title 
 		if desc 
 			p.block-box-desc= desc
+
+mixin serviceItem(src, title, desc)
+	.service-item 
+		img.service-item-icon(src= src)
+		.service-item-info
+			h3.service-item-title= title
+			p.service-item-desc= desc
