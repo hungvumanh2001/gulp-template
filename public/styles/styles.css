@@ -336,7 +336,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #e98382, #eed889);
+  background: linear-gradient(to bottom, #e98382, rgba(238, 216, 137, 0.7));
   z-index: 2;
   color: white;
   display: flex;
