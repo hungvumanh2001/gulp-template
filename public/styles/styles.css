@@ -843,6 +843,16 @@ body {
   }
 }
 
+.brand {
+  padding: 8rem 0;
+  background-color: #f8f8f8;
+}
+@media screen and (max-width: 767px) {
+  .brand {
+    padding: 3rem 0;
+  }
+}
+
 .team-main {
   position: relative;
   z-index: 1;
