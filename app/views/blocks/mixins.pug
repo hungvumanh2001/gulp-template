@@ -55,3 +55,11 @@ mixin teamItem(src="../images/img-team.png", name= "Evon dev", position= "Junior
 		.team-info
 			h3.team-name= name
 			span.team-position= position
+
+mixin workItem(src="../images/img-work1.png",icon="fa fa-home", title= "Creatively designed", full= "", desc= "Lorem ipsum dolor sit")
+	.work-item(class= full)
+		img.work-image(src=src)
+		.work-content 
+			i.work-icon(class=icon)
+			h3.work-title= title
+			span.work-desc.text.text--light= desc
