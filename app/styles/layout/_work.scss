@@ -36,6 +36,9 @@
   &-item--full {
     height: 100%;
   }
+  &-desc {
+    color: white;
+  }
   @include maxWidth(1600px) {
     &-list {
       height: 60rem;

@@ -63,3 +63,11 @@ mixin workItem(src="../images/img-work1.png",icon="fa fa-home", title= "Creative
 			i.work-icon(class=icon)
 			h3.work-title= title
 			span.work-desc.text.text--light= desc
+
+mixin peopleItem(src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1179&q=80", name = "EvonDev", job = "Graphic Design", desc = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus dignissimos quia pariatur quis modi doloremque consequatur facilis consequuntur. Fuga ea eius dignissimos porro animi, amet voluptatibus illo officiis eum numquam?")
+	li.people-item
+		img.people-avatar(src= src)
+		.people-info
+			h3.people-name= name
+			span.people-job.text.text--light= job
+			p.people-desc.text= desc
