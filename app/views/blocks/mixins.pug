@@ -97,3 +97,14 @@ mixin storyItem(src="./images/img-blog1.png", dateNumber = 15, dateText = "Jan",
 				i.fa.fa-comment.story-meta-icon
 				span.story-meta-number.text= comments
 
+mixin quoteItem(src = "../images/img-quote.png", type = false, desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi doloremque a perspiciatis minus pariatur itaque voluptas illum delectus necessitatibus, tempora sapiente nobis cupiditate, ipsum fugiat quos, rem ea enim reiciendis!", author = "Jon Doe")
+	.quote-item
+		if type == false
+			.quote-icon
+				img(src= src)
+		else
+			img(src= src).quote-image
+		.quote-info
+			p.quote-desc= desc
+			span.quote-author= author
+

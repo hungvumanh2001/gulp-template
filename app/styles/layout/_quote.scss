@@ -1,19 +1,27 @@
 .quote {
   padding: 6.5rem 0;
   @include bg($gray-color);
-  &-container {
-    @include flexbox(center, space-between);
-  }
+  // &-container {
+  //   @include flexbox(center, space-between);
+  // }
   &-arrow {
     color: $gray-dark-color;
     cursor: pointer;
     font-size: 3rem;
     padding: 1rem 2rem;
   }
-  &-content {
+  &-item {
     padding-left: 5.5rem;
     padding-right: 5.5rem;
     @include flexbox(center);
+    outline: none;
+  }
+  &-image {
+    @include size(22rem);
+    object-fit: cover;
+    border-radius: 100rem;
+    flex-shrink: 0;
+    margin-right: 2.5rem;
   }
   &-icon {
     @include size(15rem);
@@ -21,10 +29,11 @@
     border: 3px solid $third-color;
     //để giữ nguyên kích thước của icon, không bị co lại khi kích thước của phần bên cạnh quá lớn
     flex-shrink: 0;
+    margin-right: 6rem;
   }
-  &-info {
-    padding-left: 6rem;
-  }
+  // &-info {
+  //   padding-left: 6rem;
+  // }
   &-desc {
     font-size: 2.5rem;
     font-weight: 300;
@@ -48,22 +57,43 @@
       left: 0;
     }
   }
+  //slick slider
+  .slick-initialized .slick-slide {
+    display: flex;
+  }
+  .slick-arrow {
+    background-color: transparent;
+    border: 0;
+    color: $gray-dark-color;
+    cursor: pointer;
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    @include absoluteCenter("top");
+    z-index: 10;
+  }
+  .slick-pev {
+    left: 0;
+  }
+  .slick-next {
+    right: 0;
+  }
+
   @include maxWidth(767px) {
     &-arrow {
       display: none;
     }
-    &-content {
+    &-item {
       padding: 0;
       flex-direction: column;
     }
     &-icon {
       @include size(10rem);
+      margin-right: 0;
       img {
         max-width: 50%;
       }
     }
     &-info {
-      padding-left: 0;
       margin-top: 3rem;
     }
     &-desc {
