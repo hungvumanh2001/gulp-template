@@ -48,8 +48,8 @@
     @include absoluteFull();
     background: linear-gradient(
       to bottom,
-      rgba($primary-color, 1),
-      rgba($secondary-color, 1)
+      rgba($primary-color, 0.8),
+      rgba($secondary-color, 0.8)
     );
     //them z-index de khong bi after cua .item de len
     z-index: 2;

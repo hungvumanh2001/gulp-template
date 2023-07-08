@@ -11,3 +11,12 @@ body {
   color: $title-color;
   font-size: 14px;
 }
+input,
+button {
+  outline: none;
+  font-family: $primary-font;
+  line-height: 1;
+}
+button {
+  cursor: pointer;
+}
