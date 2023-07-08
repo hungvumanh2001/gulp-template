@@ -14,14 +14,13 @@ mixin blockBox(caption, title, desc)
 		if desc 
 			p.block-box-desc= desc
 
-<<<<<<< HEAD
 mixin aboutItem(src, title, iconClass, alt="")
 	.about-item 
 		img.about-image(src= src, alt= alt)
 		.about-content 
 			i.fa.fa-users(class= iconClass)
 			span.about-title= title 
-=======
+
 mixin serviceItem(src, title, desc)
 	.service-item 
 		img.service-item-icon(src= src)
@@ -97,4 +96,4 @@ mixin storyItem(src="./images/img-blog1.png", dateNumber = 15, dateText = "Jan",
 			.story-meta-item
 				i.fa.fa-comment.story-meta-icon
 				span.story-meta-number.text= comments
->>>>>>> 8140887a80a6091f62c1f7a20d439c556aa297c8
+
