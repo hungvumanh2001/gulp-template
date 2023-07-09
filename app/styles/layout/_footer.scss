@@ -64,6 +64,8 @@
     font-size: 1.5rem;
     font-style: italic;
     width: 100%;
+    border-radius: 0;
+    line-height: normal;
   }
   &-form-button {
     color: white;
@@ -73,6 +75,8 @@
     font-weight: bold;
     @include bg($third-color);
     flex-shrink: 0;
+    font-size: 1.4rem;
+    border-radius: 0;
   }
   &-blog {
     @include flexbox(center);
