@@ -179,3 +179,37 @@
   flex-direction: map-get($config, flex-direction);
   flex-wrap: map-get($config, flex-wrap);
 }
+
+@mixin color($config: ()) {
+  // ()
+
+  // Extending the default arguments with the given object
+  $config: extend(
+    (
+      color: red
+    ),
+    $config
+  );
+
+  color: map-get($config, color);
+}
+
+// Flexbox
+@mixin flexbox2($config: ()) {
+  $config: extend(
+    (
+      align-items: stretch,
+      justify-content: flex-start,
+      flex-direction: row,
+      display: flex,
+      flex-wrap: nowrap
+    ),
+    $config
+  );
+
+  display: map-get($config, display);
+  align-items: map-get($config, align-items);
+  justify-content: map-get($config, justify-content);
+  flex-direction: map-get($config, flex-direction);
+  flex-wrap: map-get($config, flex-wrap);
+}
